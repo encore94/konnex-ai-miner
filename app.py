@@ -29,6 +29,28 @@ def fetch_task():
             ]
         })
 
+    if task == "clean-up the guestroom":
+        return jsonify({
+            "status": "success",
+            "steps": [
+                "Collect items from the floor",
+                "Put objects back on shelves",
+                "Arrange pillows and blankets",
+                "Ensure the room is tidy"
+            ]
+        })
+
+    if task == "clean-up the kitchen":
+        return jsonify({
+            "status": "success",
+            "steps": [
+                "Collect dirty dishes",
+                "Place dishes into the sink or dishwasher",
+                "Wipe kitchen surfaces",
+                "Dispose of trash"
+            ]
+        })
+
     return jsonify({
         "status": "failed",
         "reason": "Unknown task"
